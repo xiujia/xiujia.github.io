@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="subprocesssubprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。 常用方法subprocess.call()执行命令，并返回执行状态，其中shel">
+<meta name="description" content="subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。 常用方法subprocess.call()执行命令，并返回执行状态，其中shell参数为False时">
 <meta name="keywords" content="subprocess">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python进程线程 - subprocess">
 <meta property="og:url" content="http://yoursite.com/2018/01/18/subprocess/index.html">
 <meta property="og:site_name" content="cgDeepLearn">
-<meta property="og:description" content="subprocesssubprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。 常用方法subprocess.call()执行命令，并返回执行状态，其中shel">
+<meta property="og:description" content="subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。 常用方法subprocess.call()执行命令，并返回执行状态，其中shell参数为False时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T08:15:19.452Z">
+<meta property="og:updated_time" content="2018-01-18T08:52:12.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python进程线程 - subprocess">
-<meta name="twitter:description" content="subprocesssubprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。 常用方法subprocess.call()执行命令，并返回执行状态，其中shel">
+<meta name="twitter:description" content="subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。 常用方法subprocess.call()执行命令，并返回执行状态，其中shell参数为False时">
 
 
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,175
+                  1,174
                 </span>
               
 
@@ -412,7 +412,7 @@
       
 
       
-        <h1 id="subprocess"><a href="#subprocess" class="headerlink" title="subprocess"></a>subprocess</h1><p>subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。</p>
+        <p>subprocess模块是python从2.4版本开始引入的模块。主要用来取代 一些旧的模块方法，如os.system、os.spawn、os.popen、commands等。subprocess通过子进程来执行外部指令，并通过input/output/error管道，获取子进程的执行的返回信息。</p>
 <h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h3 id="subprocess-call"><a href="#subprocess-call" class="headerlink" title="subprocess.call()"></a>subprocess.call()</h3><p>执行命令，并返回执行状态，其中shell参数为False时，命令需要通过列表的方式传入，当shell为True时，可直接传入命令</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>child = subprocess.call([<span class="string">'df'</span>, <span class="string">'-h'</span>], shell=<span class="keyword">False</span>)</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">udev            <span class="number">475</span>M     <span class="number">0</span>  <span class="number">475</span>M   <span class="number">0</span>% /dev</span><br><span class="line">tmpfs            <span class="number">99</span>M  <span class="number">2.9</span>M   <span class="number">97</span>M   <span class="number">3</span>% /run</span><br><span class="line">/dev/vda1        <span class="number">40</span>G  <span class="number">9.5</span>G   <span class="number">28</span>G  <span class="number">26</span>% /</span><br><span class="line">tmpfs           <span class="number">495</span>M  <span class="number">4.0</span>K  <span class="number">495</span>M   <span class="number">1</span>% /dev/shm</span><br><span class="line">tmpfs           <span class="number">5.0</span>M  <span class="number">4.0</span>K  <span class="number">5.0</span>M   <span class="number">1</span>% /run/lock</span><br><span class="line">tmpfs           <span class="number">495</span>M     <span class="number">0</span>  <span class="number">495</span>M   <span class="number">0</span>% /sys/fs/cgroup</span><br><span class="line">tmpfs            <span class="number">99</span>M     <span class="number">0</span>   <span class="number">99</span>M   <span class="number">0</span>% /run/user/<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>child2 = subprocess.call(<span class="string">'df -h'</span>, shell=<span class="keyword">True</span>)</span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">udev            <span class="number">475</span>M     <span class="number">0</span>  <span class="number">475</span>M   <span class="number">0</span>% /dev</span><br><span class="line">tmpfs            <span class="number">99</span>M  <span class="number">2.9</span>M   <span class="number">97</span>M   <span class="number">3</span>% /run</span><br><span class="line">/dev/vda1        <span class="number">40</span>G  <span class="number">9.5</span>G   <span class="number">28</span>G  <span class="number">26</span>% /</span><br><span class="line">tmpfs           <span class="number">495</span>M  <span class="number">4.0</span>K  <span class="number">495</span>M   <span class="number">1</span>% /dev/shm</span><br><span class="line">tmpfs           <span class="number">5.0</span>M  <span class="number">4.0</span>K  <span class="number">5.0</span>M   <span class="number">1</span>% /run/lock</span><br><span class="line">tmpfs           <span class="number">495</span>M     <span class="number">0</span>  <span class="number">495</span>M   <span class="number">0</span>% /sys/fs/cgroup</span><br><span class="line">tmpfs            <span class="number">99</span>M     <span class="number">0</span>   <span class="number">99</span>M   <span class="number">0</span>% /run/user/<span class="number">1000</span></span><br></pre></td></tr></table></figure>
 <h3 id="subprocess-check-call"><a href="#subprocess-check-call" class="headerlink" title="subprocess.check_call()"></a>subprocess.check_call()</h3><p>用法与subprocess.call()类似，区别是，当返回值不为0时，直接抛出异常</p>
@@ -717,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#subprocess"><span class="nav-number">1.</span> <span class="nav-text">subprocess</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用方法"><span class="nav-number">1.1.</span> <span class="nav-text">常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-call"><span class="nav-number">1.1.1.</span> <span class="nav-text">subprocess.call()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-check-call"><span class="nav-number">1.1.2.</span> <span class="nav-text">subprocess.check_call()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-check-output"><span class="nav-number">1.1.3.</span> <span class="nav-text">subprocess.check_output()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-Popen"><span class="nav-number">1.1.4.</span> <span class="nav-text">subprocess.Popen()</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用方法"><span class="nav-number">1.</span> <span class="nav-text">常用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-call"><span class="nav-number">1.1.</span> <span class="nav-text">subprocess.call()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-check-call"><span class="nav-number">1.2.</span> <span class="nav-text">subprocess.check_call()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-check-output"><span class="nav-number">1.3.</span> <span class="nav-text">subprocess.check_output()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subprocess-Popen"><span class="nav-number">1.4.</span> <span class="nav-text">subprocess.Popen()</span></a></li></ol></li></ol></div>
             
 
           </div>
