@@ -87,11 +87,11 @@
       <category term="技术随笔" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"/>
     
     
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
       <category term="next" scheme="http://yoursite.com/tags/next/"/>
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
   </entry>
   
